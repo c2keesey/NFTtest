@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../index.css" /> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromie Squiggles 2.0</title>
+  Chromie Squiggles 2.0
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #ffffff;
+    }
+  </style>
+  <script src="../p5.min.js"></script>
+  
+</head>
+
+<body>
+  <main>
+    <div style="display:block; width:100%;">
+      <div class="controls" >
+        <h1>Controls</h1>
+        <button id="generate" onclick="generate()">Generate</button>
+        <div class="w-full flex justify-between px-[3px] py-[3px] rounded-full bg-brand-700 gap-1">
+          <button class="flex-grow h-[24px] text-xs rounded-full transition border-0 focus:border-0 bg-brand-100/90 text-black focus:bg-brand-100 ring-offset-transparent"
+          onclick="switchColor(0)">
+            <span class="inline-block relative">Rainbow</span>
+          </button>
+          <button class="flex-grow h-[24px] text-xs rounded-full transition border-0 focus:border-0 text-brand-100/50 hover:text-brand-100 focus:text-brand-100">
+            <span class="inline-block relative">Monochrome
+            </span>
+          </button>
+          <button class="flex-grow h-[24px] text-xs rounded-full transition border-0 focus:border-0 text-brand-100/50 hover:text-brand-100 focus:text-brand-100">
+            <span class="inline-block relative">Random</span>
+          </button>
+        </div>
+      </div>
+      <div style="width:50%; float: left; display: inline-block;">
+        <script src="chromies.js"></script>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
