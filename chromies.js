@@ -18,6 +18,7 @@ let thickness_range = 30;
 let style;
 
 let canvas;
+let type = 'Mayan';
 
 function generate() {
   //saveArt(get());
@@ -31,7 +32,10 @@ function generate() {
   calcColors(color_mode);
   renderWave();
   saveCanvas(c, 'squiggle', 'jpg');
-  
+}
+
+function clearCanvas() {
+  clear();
 }
 
 function setup() {
@@ -45,9 +49,14 @@ function setup() {
 }
 
 function draw() {
-  background(255);
-  //update();
-  renderWave();
+  if(type == 'Mayan') {
+    setupMayan();
+    drawMayan();
+  } else if(type == 'Squiggles') {
+    background(255);
+    //update();
+    renderWave();
+  }
 }
 
 function swtichColor(mode) {
@@ -91,7 +100,7 @@ function genWave() {
 }
 
 function update() {
-  temp = yvalues[0];
+  let temp = yvalues[0];
   for (let i = 1; i < yvalues.length; i++) {
     yvalues[i-1] = yvalues[i];
   }

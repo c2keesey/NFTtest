@@ -6,7 +6,7 @@
 }
 
 /* Dropdown Button */
-.dropbtn {
+/*.dropbtn {
     background-color: black;
     color: white;
     padding: 16px;
@@ -26,7 +26,7 @@
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     z-index: 1;
   }
   
@@ -46,3 +46,39 @@
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #ec3b3b;}
+
+
+  .slidecontainer {
+    width: 100%;
+    }
+    /* The slider itself */
+    .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 95%;
+    height: 30px;
+    background: #f3126d;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .3s;
+    transition: opacity .3s;
+    }
+    /* Mouse-over effects */
+    .slider:hover {
+    opacity: 1;
+    }
+    /* The slider handle and use -moz- to override the default look) */
+    .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #c1h62f;
+    cursor: pointer;
+    }
+    .slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: #f1f8t6;
+    cursor: pointer;
+    }

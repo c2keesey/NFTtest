@@ -5,8 +5,8 @@
   <link rel="stylesheet" type="text/css" href=" index.css" /> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chromie Squiggles 2.0</title>
-  Chromie Squiggles 2.0
+  <title>Penis</title>
+  Artblocks 2.0
   <style>
     body {
       padding: 0;
@@ -22,12 +22,14 @@
   <main>
     <div style="display:block; width:100%;">
       <div class="controls" >
+        <script src="controls.js"></script> <!--does it matter where this is placed?-->
         <h1>Controls</h1>
         <button id="generate" onclick="generate()">Generate</button>
         <div class="dropdown">
           <button class="dropbtn">Type</button>
           <div class="dropdown-content">
-            <button>Squiggles</button>
+            <button onclick="switchClass('Squiggles')">Squiggles</button>
+            <button onclick="switchClass('Mayan')">Mayan</button>
           </div>
         </div>
         <div class="w-full flex justify-between px-[3px] py-[3px] rounded-full bg-brand-700 gap-1">
@@ -43,9 +45,24 @@
             <span class="inline-block relative">Random</span>
           </button>
         </div>
+        <!-- <div>
+          <div class=”slidecontainer”>
+            <input type=”range” min=”2″ max=”95″ value=”50″ class=”slider” id=”aRange”>
+            <script>
+              var slider = document.getElementById('aRange');
+              var output = document.getElementById('slider');
+              output.innerHTML = slider.value; // Display the default slider value// Update the current slider value
+              slider.oninput = function() {
+              output.innerHTML = this.value;
+              }
+              </script>
+              <p id="slider"></p>
+          </div> -->
+        </div>
       </div>
-      <div style="width:50%; float: left; display: inline-block;">
-        <script src="chromies.js"></script>
+      <div id="render" style="width:50%; float: left; display: inline-block;">
+        <script id="switch" src="chromies.js"></script>
+        <script src="mayan2.js"></script>
       </div>
     </div>
     <div class="grid" id="collection">
